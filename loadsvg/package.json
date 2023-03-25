@@ -1,0 +1,39 @@
+{
+  "name": "react-loadsvg",
+  "version": "1.0.0",
+  "description": "The LoadSVG component is a simple and customizable SVG-based loading spinner.",
+  "main": "index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shivamdevs/npm-packages/tree/main/react-loadsvg"
+  },
+  "keywords": [
+    "react",
+    "react-loading",
+    "loading-icon",
+    "svg-loader",
+    "svg-icon",
+    "load",
+    "loading",
+    "load-icon"
+  ],
+  "author": "ShivamDevs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shivamdevs/npm-packages/issues",
+    "email": "shivam0dewangan@gmail.com"
+  },
+  "devDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "homepage": "https://github.com/shivamdevs/npm-packages/tree/main/react-loadsvg#readme"
+}
