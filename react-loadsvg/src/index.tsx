@@ -1,38 +1,51 @@
 import React from 'react';
 
+interface LoadSVGProps extends React.SVGAttributes<SVGSVGElement> {
+    size?: number | string;
+    width?: number;
+    backWidth?: number;
+    duration?: number;
+    lineCap?: "inherit" | "round" | "butt" | "square" | undefined;
+    color?: string;
+    backColor?: string;
+};
+
 function LoadSVG({
     size = 20,
-    stroke = 8,
-    backStroke = 0,
+    width = 8,
+    backWidth = 0,
     duration = 2000,
     lineCap = "round",
     color = "dodgerblue",
     backColor = "transparent",
-}) {
+    className,
+    ...props
+}: LoadSVGProps) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
-            className="loadSVG"
+            className={`loadSVG ${className}`}
             width={size}
             height={size}
             viewBox="0 0 100 100"
             preserveAspectRatio="xMidYMid"
+            {...props}
         >
             <circle
                 cx="50"
                 cy="50"
-                r={50 - (backStroke / 2)}
+                r={50 - (backWidth / 2)}
                 stroke={backColor}
-                strokeWidth={backStroke}
+                strokeWidth={backWidth}
                 fill="none"
             ></circle>
             <circle
                 cx="50"
                 cy="50"
-                r={50 - (stroke / 2)}
+                r={50 - (width / 2)}
                 stroke={color}
-                strokeWidth={stroke}
+                strokeWidth={width}
                 strokeLinecap={lineCap}
                 fill="none"
             >
