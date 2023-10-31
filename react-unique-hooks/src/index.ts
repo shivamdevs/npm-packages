@@ -20,7 +20,9 @@ import useTranslation from './hooks/useTranslation';
 import useClickOutside from './hooks/useClickOutside';
 import useOnlineStatus from './hooks/useOnlineStatus';
 import useUpdateEffect from './hooks/useUpdateEffect';
+import useDocumentTitle from './hooks/useDocumentTitle';
 import useEventListener from './hooks/useEventListener';
+import useScrollPosition from './hooks/useScrollPosition';
 import useCopyToClipboard from './hooks/useCopyToClipboard';
 import useDebugInformation from './hooks/useDebugInformation';
 import useStateWithHistory from './hooks/useStateWithHistory';
@@ -53,7 +55,9 @@ const ReactHooks = {
     useOnlineStatus,
     useUpdateEffect,
     useClickOutside,
+    useDocumentTitle,
     useEventListener,
+    useScrollPosition,
     useSessionStorage,
     useCopyToClipboard,
     useDebugInformation,
@@ -70,12 +74,14 @@ export {
     useEffectOnce,
     useUpdateEffect,
     useClickOutside,
+    useDocumentTitle,
     useEventListener,
     useDeepCompareEffect,
 };
 
 export { ErrorHook } from './util';
 
+export { default as useScrollPosition, ScrollPositionHook } from './hooks/useScrollPosition';
 export { default as useSize, SizeHook } from './hooks/useSize';
 export { default as useArray, ArrayHook } from './hooks/useArray';
 export { default as useAsync, AsyncHook } from './hooks/useAsync';
