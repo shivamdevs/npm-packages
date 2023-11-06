@@ -5,7 +5,7 @@ function useDocumentTitle(titleText: string[] | string, joiner: string = " • "
     const title = useRef<string[]>([]);
 
     useEffect(() => {
-        title.current = (!Array.isArray(titleText)) ? [titleText] : titleText;
+        title.current = ((!Array.isArray(titleText)) ? [titleText] : titleText).filter(t => !!t);
 
         const baseTitle = document.head.querySelector("title")?.getAttribute("base");
         baseTitle && title.current.push(baseTitle);
