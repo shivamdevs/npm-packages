@@ -21,6 +21,7 @@ import useClickOutside from './hooks/useClickOutside';
 import useOnlineStatus from './hooks/useOnlineStatus';
 import useUpdateEffect from './hooks/useUpdateEffect';
 import useDocumentTitle from './hooks/useDocumentTitle';
+import useScrollRestore from './hooks/useScrollRestore';
 import useEventListener from './hooks/useEventListener';
 import useScrollPosition from './hooks/useScrollPosition';
 import useCopyToClipboard from './hooks/useCopyToClipboard';
@@ -56,6 +57,7 @@ const ReactHooks = {
     useUpdateEffect,
     useClickOutside,
     useDocumentTitle,
+    useScrollRestore,
     useEventListener,
     useScrollPosition,
     useSessionStorage,
@@ -75,6 +77,7 @@ export {
     useUpdateEffect,
     useClickOutside,
     useDocumentTitle,
+    useScrollRestore,
     useEventListener,
     useDeepCompareEffect,
 };
