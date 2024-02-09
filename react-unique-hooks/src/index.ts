@@ -8,6 +8,7 @@ import useToggle from './hooks/useToggle';
 import useTimeout from './hooks/useTimeout';
 import useDarkMode from './hooks/useDarkMode';
 import useDebounce from './hooks/useDebounce';
+import useInterval from './hooks/useInterval';
 import useOnScreen from './hooks/useOnScreen';
 import usePrevious from './hooks/usePrevious';
 import useLongPress from './hooks/useLongPress';
@@ -43,6 +44,7 @@ const ReactHooks = {
     useTimeout,
     useDarkMode,
     useDebounce,
+    useInterval,
     useOnScreen,
     usePrevious,
     useLongPress,
@@ -94,6 +96,7 @@ export { default as useScript, ScriptHook } from './hooks/useScript';
 export { default as useToggle, ToggleHook } from './hooks/useToggle';
 export { default as useTimeout, TimeoutHook } from './hooks/useTimeout';
 export { default as useDarkMode, DarkModeHook } from './hooks/useDarkMode';
+export { default as useInterval, IntervalHook } from './hooks/useInterval';
 export { default as useOnScreen, OnScreenHook } from './hooks/useOnScreen';
 export { default as usePrevious, PreviousHook } from './hooks/usePrevious';
 export { default as useMediaQuery, MediaQueryHook } from './hooks/useMediaQuery';
