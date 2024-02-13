@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useRef } from 'react';
 
 function useDocumentTitle(titleText: string[] | string, joiner: string = " • "): null {

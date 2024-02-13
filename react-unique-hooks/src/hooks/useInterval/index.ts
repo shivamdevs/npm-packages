@@ -1,3 +1,5 @@
+"use client"
+
 import { useCallback, useEffect, useRef } from "react";
 import { Callback } from "../../util";
 
@@ -17,7 +19,7 @@ export default function useInterval(callback: Callback, delay: number): Interval
 
     const start: Callback = useCallback(() => {
         if (!intervalRef.current) {
-            intervalRef.current = window.setInterval(() => callbackRef.current(), delay);
+            intervalRef.current = setInterval(() => callbackRef.current(), delay) ?? -1;
         }
     }, [delay]);
 

@@ -1,5 +1,8 @@
+"use client"
+
 import { useState, useEffect } from "react";
 import useEventListener from "../useEventListener";
+import win from "../../util/window";
 
 export type MediaQueryHook = boolean;
 
@@ -8,9 +11,9 @@ export default function useMediaQuery(mediaQuery: string): MediaQueryHook {
     const [mediaQueryList, setMediaQueryList] = useState<MediaQueryList | null>(null);
 
     useEffect(() => {
-        const list = window.matchMedia(mediaQuery);
+        const list = win?.matchMedia(mediaQuery) ?? null;
         setMediaQueryList(list);
-        setIsMatch(list.matches);
+        setIsMatch(list?.matches ?? false);
     }, [mediaQuery]);
 
     useEventListener("change", (e: MediaQueryListEvent) => setIsMatch(e.matches), mediaQueryList);

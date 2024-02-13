@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect } from "react"
 import useTimeout from "../useTimeout";
 import { Callback, Dependencies } from "../../util";

@@ -1,3 +1,5 @@
+"use client"
+
 import useEventListener from "../useEventListener";
 import useTimeout from "../useTimeout";
 import useEffectOnce from "../useEffectOnce";

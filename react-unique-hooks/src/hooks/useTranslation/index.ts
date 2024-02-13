@@ -1,3 +1,5 @@
+"use client"
+
 import { StateSetter } from "../../util";
 import { useLocalStorage } from "../useStorage";
 

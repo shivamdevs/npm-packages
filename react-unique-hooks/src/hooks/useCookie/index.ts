@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useCallback } from "react";
 import Cookies from "js-cookie";
 import { Callback } from "../../util";

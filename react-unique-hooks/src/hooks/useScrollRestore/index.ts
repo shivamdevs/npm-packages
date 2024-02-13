@@ -1,20 +1,23 @@
+"use client"
+
 import { useEffect, useRef } from 'react';
+import win from '../../util/window';
 
 function useScrollRestore() {
     const scrollPosition = useRef(0);
 
     useEffect(() => {
         return () => {
-            scrollPosition.current = window.scrollY;
+            scrollPosition.current = win?.scrollY ?? -1;
         };
     }, []);
 
     useEffect(() => {
-        window.scrollTo(0, scrollPosition.current);
+        win?.scrollTo(0, scrollPosition.current);
     }, []);
 
     function restoreScrollPosition() {
-        window.scrollTo(0, scrollPosition.current);
+        win?.scrollTo(0, scrollPosition.current);
     };
 
     return restoreScrollPosition;

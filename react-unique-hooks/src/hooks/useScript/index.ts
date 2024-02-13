@@ -1,3 +1,5 @@
+"use client"
+
 import useAsync from "../useAsync";
 import { ErrorHook } from "../../util";
 

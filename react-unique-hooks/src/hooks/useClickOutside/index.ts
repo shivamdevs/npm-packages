@@ -1,3 +1,5 @@
+"use client"
+
 import { CallbackEvent, TargetElementRef } from "../../util";
 import useEventListener from "../useEventListener";
 

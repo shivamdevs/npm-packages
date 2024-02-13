@@ -1,3 +1,5 @@
+"use client"
+
 import useSize from './hooks/useSize';
 import useArray from './hooks/useArray';
 import useAsync from './hooks/useAsync';

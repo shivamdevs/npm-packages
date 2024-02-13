@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useRef } from "react";
 import isEqual from "../../util/functions/isEqual";
 import { Callback, Dependencies } from "../../util";

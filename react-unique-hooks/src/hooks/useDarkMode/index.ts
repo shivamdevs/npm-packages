@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect } from "react";
 import useMediaQuery from "../useMediaQuery";
 import { useLocalStorage } from "../useStorage";

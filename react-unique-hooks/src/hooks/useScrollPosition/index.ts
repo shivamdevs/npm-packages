@@ -1,5 +1,8 @@
+"use client"
+
 import { useState, RefObject } from 'react';
 import useEventListener from '../useEventListener';
+import win from '../../util/window';
 
 export interface ScrollPositionHook {
     x: number;
@@ -18,8 +21,8 @@ function useScrollPosition(ref?: RefObject<HTMLElement>): ScrollPositionHook {
             });
         } else {
             setScrollPosition({
-                x: window.scrollX || document.documentElement.scrollLeft,
-                y: window.scrollY || document.documentElement.scrollTop
+                x: win?.scrollX ?? win?.document.documentElement.scrollLeft ?? 0,
+                y: win?.scrollY ?? win?.document.documentElement.scrollTop ?? 0
             });
         }
     };
