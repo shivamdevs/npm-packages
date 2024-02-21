@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 import useEventListener from "../useEventListener";
 
 export type OnlineStatusHook = boolean;
 
 export default function useOnlineStatus(): OnlineStatusHook {
-    const [online, setOnline] = useState<boolean>(navigator.onLine);
+  const [online, setOnline] = useState<boolean>(navigator.onLine);
 
-    useEventListener("online", () => setOnline(navigator.onLine));
-    useEventListener("offline", () => setOnline(navigator.onLine));
+  useEventListener("online", () => setOnline(navigator.onLine));
+  useEventListener("offline", () => setOnline(navigator.onLine));
 
-    return online;
+  return online;
 }

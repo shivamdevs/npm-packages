@@ -22,36 +22,36 @@ yarn add react-unique-hooks
 
 This package provides a range of custom hooks that can be utilized in your React applications. Below is a comprehensive list of the hooks currently available:
 
-* useToggle
-* useTimeout
-* useDebounce
-* useUpdateEffect
-* useArray
-* usePrevious
-* useStateWithHistory
-* useStorage
-* useAsync
-* useFetch
-* useScript
-* useDeepCompareEffect
-* useEventListener
-* useOnScreen
-* useWindowSize
-* useMediaQuery
-* useGeolocation
-* useStateWithValidation
-* useSize
-* useEffectOnce
-* useClickOutside
-* useDarkMode
-* useCopyToClipboard
-* useCookie
-* useTranslation
-* useOnlineStatus
-* useRenderCount
-* useDebugInformation
-* useHover
-* useLongPress
+- useToggle
+- useTimeout
+- useDebounce
+- useUpdateEffect
+- useArray
+- usePrevious
+- useStateWithHistory
+- useStorage
+- useAsync
+- useFetch
+- useScript
+- useDeepCompareEffect
+- useEventListener
+- useOnScreen
+- useWindowSize
+- useMediaQuery
+- useGeolocation
+- useStateWithValidation
+- useSize
+- useEffectOnce
+- useClickOutside
+- useDarkMode
+- useCopyToClipboard
+- useCookie
+- useTranslation
+- useOnlineStatus
+- useRenderCount
+- useDebugInformation
+- useHover
+- useLongPress
 
 ## Contributing
 

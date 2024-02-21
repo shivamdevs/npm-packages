@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
 import { useRef } from "react";
 
 export type PreviousHook<T> = T | undefined;
 
 export default function usePrevious<T>(value: T): PreviousHook<T> {
-    const currentRef = useRef<T>(value);
-    const previousRef = useRef<T>();
+  const currentRef = useRef<T>(value);
+  const previousRef = useRef<T>();
 
-    if (currentRef.current !== value) {
-        previousRef.current = currentRef.current
-        currentRef.current = value
-    }
+  if (currentRef.current !== value) {
+    previousRef.current = currentRef.current;
+    currentRef.current = value;
+  }
 
-    return previousRef.current;
+  return previousRef.current;
 }

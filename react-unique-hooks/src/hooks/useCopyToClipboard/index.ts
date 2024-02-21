@@ -1,26 +1,40 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import copy from "copy-to-clipboard";
 
 export interface CopyToClipboardOptionsHook {
-    debug?: boolean;
-    message?: string;
-    format?: string;
-    onCopy?: (clipboardData: object) => void;
+  debug?: boolean;
+  message?: string;
+  format?: string;
+  onCopy?: (clipboardData: object) => void;
 }
 
-export type CopyToClipboardHook = [(text: string, options?: CopyToClipboardOptionsHook) => boolean, { value: string, success: boolean }];
+export type CopyToClipboardCallback = (
+  text: string,
+  options?: CopyToClipboardOptionsHook
+) => void;
 
-export default function useCopyToClipboard() {
-    const [value, setValue] = useState<string>("");
-    const [success, setSuccess] = useState<boolean>(false);
+export type CopyToClipboardHook = [
+  CopyToClipboardCallback,
+  { value: string; success: boolean }
+];
 
-    const copyToClipboard = (text: string, options?: CopyToClipboardOptionsHook) => {
-        const result = copy(text, options);
-        if (result) setValue(text);
-        setSuccess(result);
-    }
+export default function useCopyToClipboard(): CopyToClipboardHook {
+  const [value, setValue] = useState<string>("");
+  const [success, setSuccess] = useState<boolean>(false);
 
-    return [copyToClipboard, { value, success }];
+  const copyToClipboard = (
+    text: string,
+    options?: CopyToClipboardOptionsHook
+  ) => {
+    setSuccess(false);
+    setValue("");
+    const result = copy(text, options);
+    if (result) setValue(text);
+    setSuccess(result);
+    return result;
+  };
+
+  return [copyToClipboard, { value, success }];
 }
