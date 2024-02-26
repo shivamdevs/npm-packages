@@ -1,8 +1,9 @@
 "use client";
 
-import { useCallback, useState, useEffect, useMemo } from "react";
+import { useCallback, useState, useMemo } from "react";
 import { Callback } from "../../util";
 import win from "../../util/window";
+import useDebounce from "../useDebounce";
 
 export type StorageTypeHook = "localStorage" | "sessionStorage";
 
@@ -34,13 +35,19 @@ export default function useStorage<T>(
     }
   });
 
-  useEffect(() => {
-    if (value === undefined) {
-      storageObject?.removeItem(key);
-    } else {
-      storageObject?.setItem(key, JSON.stringify(value));
-    }
-  }, [key, value, storageObject]);
+  useDebounce(
+    () => {
+      if (!storageObject) return;
+
+      if (value === undefined) {
+        storageObject?.removeItem(key);
+      } else {
+        storageObject?.setItem(key, JSON.stringify(value));
+      }
+    },
+    100,
+    [key, value, storageObject]
+  );
 
   const remove = useCallback(() => {
     setValue(undefined);
