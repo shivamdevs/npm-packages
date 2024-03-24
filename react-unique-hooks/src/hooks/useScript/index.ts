@@ -18,5 +18,5 @@ export default function useScript<E>(url: string): ScriptHook<E> {
     });
   }, [url]);
 
-  return [loading, error];
+  return [loading, error] as const;
 }

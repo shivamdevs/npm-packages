@@ -1,6 +1,6 @@
 {
   "name": "react-unique-hooks",
-  "version": "0.1.22",
+  "version": "0.1.23",
   "description": "The React-unique-hooks is a set of hooks for making the day to day of web development easier.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

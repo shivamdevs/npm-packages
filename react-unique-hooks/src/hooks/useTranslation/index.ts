@@ -48,7 +48,7 @@ export default function useTranslation<L>(
     fallbackLanguage,
     setFallbackLanguage,
     t: translate,
-  };
+  } as const;
 }
 
 function getNestedTranslation<L>(

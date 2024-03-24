@@ -37,5 +37,5 @@ export default function useTimeout(
     set();
   }, [clear, set]);
 
-  return { reset, clear };
+  return { reset, clear } as const;
 }

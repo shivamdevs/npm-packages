@@ -13,5 +13,5 @@ export default function useToggle(defaultValue?: boolean): ToggleHook {
     );
   }
 
-  return [value, toggleValue];
+  return [value, toggleValue] as const;
 }

@@ -75,5 +75,5 @@ export default function useStateWithHistory<T>(
       forward,
       go,
     },
-  ];
+  ] as const;
 }

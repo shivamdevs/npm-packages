@@ -28,5 +28,5 @@ export default function useStateWithValidation<T>(
     [validationFunc]
   );
 
-  return [state, onChange, isValid];
+  return [state, onChange, isValid] as const;
 }

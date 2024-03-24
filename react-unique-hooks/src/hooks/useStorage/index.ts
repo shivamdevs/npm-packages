@@ -4,6 +4,7 @@ import { useCallback, useState, useMemo } from "react";
 import { Callback } from "../../util";
 import win from "../../util/window";
 import useDebounce from "../useDebounce";
+import useInterval from "../useInterval";
 
 export type StorageTypeHook = "localStorage" | "sessionStorage";
 
@@ -21,8 +22,12 @@ export default function useStorage<T>(
   storage: StorageTypeHook
 ): StorageHook<T> {
   const storageObject: Storage | undefined = useMemo(() => win?.[storage], []);
-  const [value, setValue] = useState<T | undefined>(() => {
-    const jsonValue = storageObject?.getItem(key);
+  const [value, setValue] = useState<T | undefined>();
+
+  const { stop } = useInterval(() => {
+    if (typeof window === "undefined" || !storageObject) return;
+    stop();
+    const jsonValue = storageObject.getItem(key);
     try {
       if (jsonValue !== null) return JSON.parse(jsonValue ?? "{}") as T;
     } catch (e) {
@@ -33,11 +38,10 @@ export default function useStorage<T>(
         return defaultValue;
       }
     }
-  });
-
+  }, 20);
   useDebounce(
     () => {
-      if (!storageObject) return;
+      if (typeof window === "undefined" || !storageObject) return;
 
       if (value === undefined) {
         storageObject?.removeItem(key);
@@ -53,7 +57,7 @@ export default function useStorage<T>(
     setValue(undefined);
   }, []);
 
-  return [value, setValue, remove];
+  return [value, setValue, remove] as const;
 }
 
 export function useLocalStorage<T>(

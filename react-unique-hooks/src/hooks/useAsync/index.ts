@@ -11,6 +11,24 @@ export type AsyncHook<T, E> = [
   error: ErrorHook<E>
 ];
 
+/**
+ * Perform any asynchronous function as a hook
+ *
+ * @param callback: A function that returns any type of promise.
+ * @param dependencies: A dependency array, based on which the promise state is re-calculated.
+ *
+ * @returns An array of value, loading state & error.
+ *
+ * @example
+ * const [data, isLoading, error] = useAsync(() => new Promise((resolve) => {
+ *    setTimeout(resolve, 5000);
+ * }));
+ *
+ * @see https://docs.devflikr.com/packages/react-unique-hooks/useAsync
+ *
+ * @author DevFlikr LLC
+ * @date 2024-03-12
+ */
 export default function useAsync<T, E>(
   callback: PromiseCallback<T>,
   dependencies: Dependencies = []
@@ -33,5 +51,5 @@ export default function useAsync<T, E>(
     callbackMemoized();
   }, [callbackMemoized]);
 
-  return [value, loading, error];
+  return [value, loading, error] as const;
 }
