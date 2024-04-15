@@ -1,70 +1,70 @@
 {
-  "name": "react-unique-hooks",
-  "version": "0.1.22",
-  "description": "The React-unique-hooks is a set of hooks for making the day to day of web development easier.",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/esm/index.d.ts",
-  "typings": "./dist/esm/index.d.ts",
-  "scripts": {
-    "prepublishOnly": "npm run compile",
-    "postpublish": "npm run clean",
-    "compile": "npm run clean && npm run compile:esm && npm run compile:cjs",
-    "compile:esm": "tsc",
-    "compile:cjs": "tsc --module commonjs --outDir dist/cjs",
-    "clean": "rimraf dist"
-  },
-  "files": [
-    "dist",
-    "LICENSE",
-    "package.json",
-    "README.md"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shivamdevs/npm-packages/tree/main/react-unique-hooks"
-  },
-  "keywords": [
-    "hook",
-    "hooks",
-    "react",
-    "react-hook",
-    "react-hooks",
-    "unique-hook",
-    "custom-hook",
-    "unique-hooks",
-    "custom-hooks",
-    "reusable-hook",
-    "reusable-hooks",
-    "react-unique-hook",
-    "react-custom-hook",
-    "react-unique-hooks",
-    "react-custom-hooks",
-    "react-reusable-hook",
-    "react-reusable-hooks"
-  ],
-  "author": "ShivamDevs",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/shivamdevs/npm-packages/issues",
-    "email": "shivam0dewangan@gmail.com"
-  },
-  "devDependencies": {
-    "@types/js-cookie": "^3.0.3",
-    "@types/react": "^18.2.15",
-    "eslint": "^8.45.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rimraf": "^5.0.1",
-    "typescript": "^5.1.6"
-  },
-  "peerDependencies": {
-    "react": ">=18"
-  },
-  "homepage": "https://github.com/shivamdevs/npm-packages/tree/main/react-unique-hooks#readme",
-  "dependencies": {
-    "copy-to-clipboard": "^3.3.3",
-    "js-cookie": "^3.0.5",
-    "tslib": "^2.6.2"
-  }
+	"name": "react-unique-hooks",
+	"version": "0.1.23",
+	"description": "The React-unique-hooks is a set of hooks for making the day to day of web development easier.",
+	"main": "./dist/cjs/index.js",
+	"module": "./dist/esm/index.js",
+	"types": "./dist/esm/index.d.ts",
+	"typings": "./dist/esm/index.d.ts",
+	"scripts": {
+		"prepublishOnly": "npm run compile",
+		"postpublish": "npm run clean",
+		"compile": "npm run clean && npm run compile:esm && npm run compile:cjs",
+		"compile:esm": "tsc",
+		"compile:cjs": "tsc --module commonjs --outDir dist/cjs",
+		"clean": "rimraf dist"
+	},
+	"files": [
+		"dist",
+		"LICENSE",
+		"package.json",
+		"README.md"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/shivamdevs/npm-packages/tree/main/react-unique-hooks"
+	},
+	"keywords": [
+		"hook",
+		"hooks",
+		"react",
+		"react-hook",
+		"react-hooks",
+		"unique-hook",
+		"custom-hook",
+		"unique-hooks",
+		"custom-hooks",
+		"reusable-hook",
+		"reusable-hooks",
+		"react-unique-hook",
+		"react-custom-hook",
+		"react-unique-hooks",
+		"react-custom-hooks",
+		"react-reusable-hook",
+		"react-reusable-hooks"
+	],
+	"author": "ShivamDevs",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/shivamdevs/npm-packages/issues",
+		"email": "shivam0dewangan@gmail.com"
+	},
+	"devDependencies": {
+		"@types/js-cookie": "^3.0.3",
+		"@types/react": "^18.2.15",
+		"eslint": "^8.45.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"rimraf": "^5.0.1",
+		"typescript": "^5.1.6"
+	},
+	"peerDependencies": {
+		"react": ">=18"
+	},
+	"homepage": "https://github.com/shivamdevs/npm-packages/tree/main/react-unique-hooks#readme",
+	"dependencies": {
+		"copy-to-clipboard": "^3.3.3",
+		"js-cookie": "^3.0.5",
+		"tslib": "^2.6.2"
+	}
 }
