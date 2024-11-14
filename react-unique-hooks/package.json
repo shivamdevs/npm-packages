@@ -1,6 +1,6 @@
 {
 	"name": "react-unique-hooks",
-	"version": "0.1.24",
+	"version": "0.1.25",
 	"description": "The React-unique-hooks is a set of hooks for making the day to day of web development easier.",
 	"main": "./dist/cjs/index.js",
 	"module": "./dist/esm/index.js",
@@ -59,7 +59,7 @@
 		"typescript": "^5.1.6"
 	},
 	"peerDependencies": {
-		"react": ">=19"
+		"react": ">=18"
 	},
 	"homepage": "https://github.com/shivamdevs/npm-packages/tree/main/react-unique-hooks#readme",
 	"dependencies": {
